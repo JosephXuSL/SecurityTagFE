@@ -1,0 +1,31 @@
+<nz-layout>
+    <nz-header>
+        <div nz-row>
+            <div nz-col nzSpan="22">
+                <div class="logo">
+                    <a href="https://ng.ant.design/" target="_blank">
+                        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+                        <h1>Ant Design Of Angular</h1>
+                    </a>
+                </div>
+                
+                <ul nz-menu nzTheme="dark" nzMode="horizontal">
+                    <li nz-menu-item [routerLink]="['/main/home']">首页</li>
+                    <li nz-menu-item [routerLink]="['/main/myBusiness']">我的业务</li>
+                </ul>
+            </div>            
+            <div nz-col nzSpan="2">
+                <button nz-button nzGhost nzType="default" nzShape="round" [routerLink]="['/login/user']">
+                    登录/注册
+                </button>
+            </div>            
+        </div>        
+    </nz-header>
+    <nz-content>
+        <!-- <h3>TEST</h3> -->
+        <div class="inner-content">
+            <router-outlet></router-outlet>
+        </div>
+    </nz-content>
+    <nz-footer>Company ©2023 Daoshihouzaishuo</nz-footer>
+</nz-layout>

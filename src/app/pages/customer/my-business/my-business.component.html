@@ -1,0 +1,25 @@
+<nz-layout>
+    <nz-sider nzWidth="200px" nzTheme="light">
+        <ul nz-menu nzMode="inline" class="sider-menu">
+            
+            <li nz-submenu nzTitle="开发商管理" nzIcon="laptop">
+                <ul>
+                    <li nz-menu-item>我的组织</li>
+                    <li nz-menu-item>权限设置</li>
+                    <li nz-menu-item>人员管理</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="应用标签管理" nzIcon="tags">
+                <ul>
+                    <li nz-menu-item>我的应用</li>
+                    <li nz-menu-item>标签申请</li>
+                </ul>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout class="inner-layout">       
+        <nz-content>
+            <router-outlet></router-outlet>
+        </nz-content>
+    </nz-layout>
+</nz-layout>

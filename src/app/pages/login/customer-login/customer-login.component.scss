@@ -1,0 +1,59 @@
+.content{
+    height: 100%;
+}
+
+.login-bg{
+    background: url("../../../../assets/images/login-bg.jpg");
+	background-size: cover;
+    height: 100%;
+}
+
+.logo {
+    width: 450px;
+    height: 128px;
+    float: left;
+    padding: 20px;
+    img {
+        display: inline-block;
+        height: 64px;
+        width: 64px;
+        vertical-align: middle;
+      }
+      h1 {
+        display: inline-block;
+        margin: 0 0 0 20px;
+        // color: #fff;
+        font-weight: 600;
+        font-size: 28px;
+        font-family: Avenir,Helvetica Neue,Arial,Helvetica,sans-serif;
+        vertical-align: middle;
+      }
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  .login-form {
+    max-width: 600px;
+  }
+
+  .login-form-margin {
+    margin-bottom: 16px;
+  }
+
+  .login-form-forgot {
+    float: right;
+  }
+
+  .login-form-button {
+    width: 100%;
+  }
+
+  .form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  

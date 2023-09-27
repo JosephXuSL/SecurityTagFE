@@ -1,0 +1,45 @@
+.logo {
+    width: 240px;
+    height: 64px;
+    float: left;
+  }
+  
+  .logo img {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+  }
+  
+  .logo h1 {
+    display: inline-block;
+    margin: 0 0 0 20px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Avenir,Helvetica Neue,Arial,Helvetica,sans-serif;
+    vertical-align: middle;
+  }
+
+  [nz-menu] {
+    line-height: 64px;
+  }
+
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+
+  nz-content {
+    padding: 0 50px;
+    height: 500px;
+  }
+
+  nz-footer {
+    text-align: center;
+  }
+
+  .inner-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+  }

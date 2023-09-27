@@ -1,0 +1,43 @@
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
+    <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="8">
+            <nz-form-item>
+                <nz-form-label>应用名</nz-form-label>
+                <nz-form-control>
+                    <input nz-input placeholder="请输入" [formControlName]="'appName'" [attr.id]="'appName'" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="8">
+            <nz-form-item>
+                <nz-form-label>应用ID</nz-form-label>
+                <nz-form-control>
+                    <input nz-input placeholder="请输入" [formControlName]="'appid'" [attr.id]="'appid'" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+        <div nz-col [nzSpan]="8">
+            <nz-form-item>
+                <nz-form-label>开发商</nz-form-label>
+                <nz-form-control>
+                    <input nz-input placeholder="请输入" [formControlName]="'developerName'" [attr.id]="'developerName'" />
+                </nz-form-control>
+            </nz-form-item>
+        </div>
+    </div>
+    <div nz-row>        
+        <div nz-col [nzSpan]="24" class="search-area">
+            <button nz-button [nzType]="'primary'" nzGhost>
+                <span nz-icon nzType="search"></span>
+                查找
+            </button>
+            <button nz-button (click)="resetForm()" nzDanger>
+                <span nz-icon nzType="delete"></span>
+                清空
+            </button>
+        </div>
+    </div>
+</form>
+<div class="search-result-list">
+    <nz-empty></nz-empty>
+</div>
