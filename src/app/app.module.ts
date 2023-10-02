@@ -17,9 +17,14 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +34,9 @@ import { CustomerLoginComponent } from './pages/login/customer-login/customer-lo
 import { CustomerRegisterComponent } from './pages/login/customer-register/customer-register.component';
 import { AdminRegisterComponent } from './pages/login/admin-register/admin-register.component';
 
+import { AnswersComponent } from './shared/freeQuote/answers/answers.component';
+import { AnswersEstimateComponent } from './shared/freeQuote/answers-estimate/answers-estimate.component';
+
 registerLocaleData(zh);
 
 @NgModule({
@@ -37,7 +45,9 @@ registerLocaleData(zh);
     AdminLoginComponent,
     CustomerLoginComponent,
     CustomerRegisterComponent,
-    AdminRegisterComponent
+    AdminRegisterComponent,
+    AnswersComponent,
+    AnswersEstimateComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +64,13 @@ registerLocaleData(zh);
     NzCheckboxModule,
     NzButtonModule,
     NzRadioModule,
+    NzDatePickerModule,
     NzStepsModule,
     NzFormModule,
+    NzDropDownModule,
+    NzSelectModule,
+    NzSliderModule,
+    NzToolTipModule,
     CommonModule,
     CustomerModule,
     NzAutocompleteModule

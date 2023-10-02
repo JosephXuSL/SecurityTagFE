@@ -1,0 +1,57 @@
+<div class="center">
+    <div class="extimateContent">
+        <div>
+            <div class="center">
+                <b>Starting at: </b>         
+                <span nz-icon nzType="info-circle" nz-tooltip nzTooltipTitle="tool tip, balabalabala"></span>
+            </div>
+            <div class="center">
+                <b class="price">{{quote|currency:'USD':'symbol':'0.2-2'}}</b>
+                <span class="perday">/ day</span>
+            </div>   
+        </div>
+        <div >
+            <div class="greyTitle">
+                <span>Coverage </span>         
+                <span nz-icon nzType="info-circle" nz-tooltip nzTooltipTitle="coverage tool tip, balabalabala"></span>
+            </div>
+            <div>
+                <span></span>
+                <p class="fontClass">{{coverage*1000 | currency:'USD':'symbol':'4.0-0'}}</p>
+            </div>
+            <nz-slider [nzTipFormatter]="sliderFormatter" [nzMin]="1" [nzMax]="2000"
+             [(ngModel)]="coverage" (ngModelChange)="caculateQuoteByCoverage($event)"></nz-slider>
+        </div>
+        <div class="termDiv">
+            <div class="greyTitle">
+                <span>Term length </span>         
+                <span nz-icon nzType="info-circle" nz-tooltip nzTooltipTitle="term tool tip, balabalabala"></span>
+            </div>
+            <div>        
+                <p class="fontClass">{{term}} years</p>
+            </div>
+            <nz-slider [nzTipFormatter]="termFormatter" [nzMin]="1" [nzMax]="30" 
+            [(ngModel)]="term" (ngModelChange)="caculateQuoteByTerm($event)"></nz-slider>
+        </div>
+        <div>
+            <button nz-button >
+                <b>Get my final rate</b> 
+            </button>
+        </div>
+        <div nz-row>
+            <div nz-col nzSpan="10">
+                <a (click)="editAnswer()">
+                    <span nz-icon nzType="left" nzTheme="outline"></span>
+                    Edit answers
+                </a>        
+            </div>
+            <div nz-col nzSpan="11" nzOffset="3">
+                <a>
+                    <span nz-icon nzType="upload" nzTheme="outline"></span>
+                    Save your estimate
+                </a>        
+            </div>
+        </div>
+    </div>
+</div>
+

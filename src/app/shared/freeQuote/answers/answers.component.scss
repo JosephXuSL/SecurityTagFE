@@ -1,0 +1,28 @@
+form {
+  width: 300px;
+  margin: 20px;
+  nz-date-picker{
+    width: 300px;
+  }
+  button {
+    margin-top:20px;
+    margin-bottom: 20px;
+    width: 200px;
+    background-color: orangered;
+    color: whitesmoke;
+  }
+  nz-form-label{
+    padding: 0px;
+    margin-top: 5px;
+  }
+  nz-form-item{
+    margin: 0px;
+  }
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

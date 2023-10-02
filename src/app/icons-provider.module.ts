@@ -20,12 +20,13 @@ import {
   EyeInvisibleOutline,
   CaretDownOutline,
   CaretUpOutline,
-  SaveOutline
+  SaveOutline,
+  CaretRightOutline
 
 } from '@ant-design/icons-angular/icons';
 
 const icons = [MenuFoldOutline, MenuUnfoldOutline, DashboardOutline, FormOutline,LoadingOutline,SearchOutline,SafetyCertificateOutline,TeamOutline,TagsOutline,
-  DeleteOutline,LaptopOutline,UserAddOutline,UserOutline,KeyOutline,LockOutline,EyeInvisibleOutline, CaretDownOutline, CaretUpOutline,SaveOutline];
+  DeleteOutline,LaptopOutline,UserAddOutline,UserOutline,KeyOutline,LockOutline,EyeInvisibleOutline, CaretDownOutline, CaretUpOutline,SaveOutline,CaretRightOutline];
 
 @NgModule({
   imports: [NzIconModule],

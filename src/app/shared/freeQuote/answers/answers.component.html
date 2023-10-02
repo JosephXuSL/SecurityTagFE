@@ -1,0 +1,82 @@
+<div class="center">
+  <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" >
+    <div nz-row>
+      <div nz-col [nzSpan]="11">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="firstName" nzNoColon>
+            <span>First Name</span>
+          </nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please input your first name!">
+            <input nz-input id="firstName" formControlName="firstName" [(ngModel)]="answer.firstName"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="11" [nzOffset]="2">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="lastName" nzNoColon>
+            <span>Last Name</span>
+          </nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please input your last name!">
+            <input nz-input id="lastName" formControlName="lastName" [(ngModel)]="answer.lastName" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row>
+      <div nz-col [nzSpan]="11">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="gender" nzNoColon>Gender</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please select your gender!">
+            <nz-select id="gender" formControlName="gender" [(ngModel)]="answer.gender">
+              <nz-option nzValue="male" nzLabel="Male"></nz-option>
+              <nz-option nzValue="female" nzLabel="Female"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="11" [nzOffset]="2">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="zipCode" nzNoColon>ZIP Code</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please input zip code!">
+            <input nz-input id="zipCode" formControlName="zipCode" [(ngModel)]="answer.zipCode"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="24" nzNoColon>Date of Birth</nz-form-label>
+      <nz-form-control [nzSpan]="24" nzValidateStatus={{errorType}} nzErrorTip="Please select your birthday!">
+        <nz-date-picker formControlName="birthday" nzFormat="dd/MM/yyyy" [nzPlaceHolder]="dateFormate"
+        [(ngModel)]="answer.birthday"></nz-date-picker>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="24" nzFor="phoneNumber" nzNoColon>Phone Number</nz-form-label>
+      <nz-form-control [nzSpan]="24" nzErrorTip="Please input your phone number!">
+        <input formControlName="phoneNumber" id="phoneNumber" nz-input [(ngModel)]="answer.phoneNumber"/>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="24" nzFor="email" nzNoColon>Email</nz-form-label>
+      <nz-form-control [nzSpan]="24" [nzErrorTip]="emailErrorTpl">
+        <input nz-input formControlName="email" id="email" type="email" (input)="onEmailInput($event)" 
+        [nzAutocomplete]="auto" [(ngModel)]="answer.email"/>
+        <nz-autocomplete #auto>
+          <nz-auto-option *ngFor="let option of emailOptions" [nzValue]="option">{{ option }}</nz-auto-option>
+        </nz-autocomplete>
+        <ng-template #emailErrorTpl let-control>
+          <ng-container *ngIf="control.hasError('email')">The input is not valid E-mail!</ng-container>
+          <ng-container *ngIf="control.hasError('required')">Please input your E-mail!</ng-container>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+  
+    <nz-form-item nz-row >
+      <nz-form-control [nzSpan]="6" [nzOffset]="4">
+        <button nz-button nzShape="round">
+          <span nz-icon nzType="caret-right" nzTheme="outline">GET MY FREE QUOTE </span>
+        </button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>

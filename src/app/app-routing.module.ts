@@ -6,14 +6,20 @@ import { CustomerLoginComponent } from './pages/login/customer-login/customer-lo
 import { CustomerRegisterComponent } from './pages/login/customer-register/customer-register.component';
 import { AdminRegisterComponent } from './pages/login/admin-register/admin-register.component';
 
+import { AnswersComponent } from './shared/freeQuote/answers/answers.component';
+import { AnswersEstimateComponent } from './shared/freeQuote/answers-estimate/answers-estimate.component';
+
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'main' },
+  // { path: '', pathMatch: 'full', redirectTo: 'main' },
   { path: 'login/user', component: CustomerLoginComponent },
   { path: 'login/operator', component: AdminLoginComponent },
   { path: 'register/user', component: CustomerRegisterComponent },
   { path: 'register/operator', component: AdminRegisterComponent },
   { path: 'admin', loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule) },
-  { path: 'main', loadChildren: () => import('./pages/customer/customer.module').then(m => m.CustomerModule) }
+  { path: 'main', loadChildren: () => import('./pages/customer/customer.module').then(m => m.CustomerModule) },
+  { path: 'answers', component: AnswersComponent },
+  { path: 'estimate', component: AnswersEstimateComponent },
+  { path: '',  redirectTo:'answers', pathMatch:'full' }
 ];
 
 @NgModule({
